@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <title>Robson de Sá | InovCodeR</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="icon" id="favicon" href="images/favicon.png" type="image/x-icon" />
+    </head>
+    <body>
+    
+        <script>
+            var displayName = "Robson de Sá";
+            var profession = "Desenvolvedor FullStack";
+            var disableCredit = false;
+            var profilePicURL = "images/InovCodeR2.png";
+            var linkOneTitle = "Solicite seu Orçamento via WhatsApp";
+            var linkOneURL = "https://api.whatsapp.com/send/?phone=55081988335226&text&type=phone_number&app_absent=0";
+            var linkOneIcon = "fa fa-whatsapp";
+            var linkTwoTitle = "Solicite seu Orçamento via E-mail";
+            var linkTwoURL = "mailto:inovcoder@gmail.com";
+            var linkTwoIcon = "fa fa-envelope";
+            var linkThreeTitle = "Vem conferir meu Portfólio";
+            var linkThreeURL = "https://robsondesa.github.io/robsonportfolio";
+            var linkThreeIcon = "fa fa-globe";
+            var linkFourTitle = "Me segue lá no LinkedIn";
+            var linkFourURL = "https://www.linkedin.com/in/robson-de-s%25C3%25A1-923641210/";
+            var linkFourIcon = "fa fa-linkedin";
+            
+
+            // Don't worry about any of the rest of this file unless you need to change the HTML or Javascript...
+        </script>
+        
+        <div id="profile"></div>
+        <p id="typing-caption"></p>
+        <div id="links">
+            <a class="link" href="#" target="_blank" rel="noopener" id="linkOne">
+                <i class="" id="iconOne"></i>
+            </a>
+            <a class="link" href="#" target="_blank" rel="noopener" id="linkTwo">
+                <i class="" aria-hidden="true" id="iconTwo"></i>
+            </a>
+            <a class="link" href="#" target="_blank" rel="noopener" id="linkThree">
+                <i class="" aria-hidden="true" id="iconThree"></i>
+            </a>
+            <a class="link" href="#" target="_blank" rel="noopener" id="linkFour">
+                <i class="" aria-hidden="true" itemref="iconFour"></i>
+            </a>
+
+        </div>
+        <p id="credit"></p>
+        <script>
+            // Update page with variables
+            document.querySelector("title").innerHTML = displayName + " | InovCodeR";
+            document.getElementById("profile").innerHTML = "<img id='userPhoto' src='" + profilePicURL + "' alt='" + displayName + "'s Profile Picture'><div id='userName'><h1 id='usersName'>" + displayName + "</h1><p id='usersProfession'>" + profession + "</p></div>"
+            document.getElementById("favicon").href = profilePicURL;
+
+            document.getElementById("linkOne").href = linkOneURL;
+            document.getElementById("linkOne").innerHTML = "<i class='" + linkOneIcon + "' id='iconOne'></i> " + linkOneTitle;
+
+            document.getElementById("linkTwo").href = linkTwoURL;
+            document.getElementById("linkTwo").innerHTML = "<i class='" + linkTwoIcon + "' id='iconTwo'></i> " + linkTwoTitle;
+
+            document.getElementById("linkThree").href = linkThreeURL;
+            document.getElementById("linkThree").innerHTML = "<i class='" + linkThreeIcon + "' id='iconThree'></i> " + linkThreeTitle;
+
+            document.getElementById("linkFour").href = linkFourURL;
+            document.getElementById("linkFour").innerHTML = "<i class='" + linkFourIcon + "' id='iconFour'></i> " + linkFourTitle;
+
+
+            // Disable credit text based on settings
+            if (disableCredit == true) {
+                document.getElementById("credit").style = "display: none;"
+            } else {
+                document.getElementById("credit").innerHTML = "<a rel='noopener' href='https://robsondesa.github.io/robsonportfolio' target='_blank'>® InovCodeR</a>"
+            }
+        </script>
+        <script>
+            const caption = "Seja bem-vindo(a).";
+            const captionElement = document.getElementById("typing-caption");
+            
+            let i = 0;
+            
+            function typeCaption() {
+              if (i < caption.length) {
+                captionElement.innerHTML += caption.charAt(i);
+                i++;
+                setTimeout(typeCaption, Math.floor(Math.random() * 200) + 100); // Define a velocidade de digitação
+              }
+            }
+            
+            typeCaption();
+            
+
+        </script>
+
+    </body>
+</html>
